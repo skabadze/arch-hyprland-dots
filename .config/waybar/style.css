@@ -1,0 +1,100 @@
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: "Symbols Nerd Font", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 12px;
+}
+
+window#waybar {
+    background-color: rgba(30, 30, 46, 0.8);
+    border-radius: 0 0 8 8;
+    /*
+    border-bottom: 2px solid rgba(180,190,254,0.6);
+    border-left: 2px solid rgba(180,190,254,0.6);
+    border-right: 2px solid rgba(180,190,254,0.6);
+    */
+    color: #ffffff;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+button {
+    /* Use box-shadow instead of border so the text isn't offset */
+    box-shadow: inset 0 -3px transparent;
+    /* Avoid rounded borders under each button name */
+    border: none;
+    border-radius: 0;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+button:hover {
+    background: inherit;
+}
+
+#workspaces button {
+    padding: 0 2px;
+    background-color: transparent;
+    color: #ffffff;
+}
+
+#workspaces button:hover {
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+}
+
+#workspaces button.active {
+    padding: 0 8px;
+}
+
+#clock,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#workspaces,
+#custom-power,
+#custom-vpn,
+#custom-pomo,
+#custom-playerctl {
+    margin: 0 7px;
+}
+
+#temperature,
+#cpu,
+#memory {
+    margin-right: 4px;
+    margin-left: 4px;
+}
+
+#custom-vpn,
+#network {
+    margin-right: 2px;
+    margin-left: 2px;
+}
+
+#custom-playerctl {
+    margin-left: 5px;
+}
+
+#window, 
+#workspaces {
+    margin-right: 4px;
+    margin-left: 4px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #eb4d4b;
+}
